@@ -1,0 +1,6 @@
+El código de referencia utilizado para el análisis del algoritmo Rijndael se encuentra en el proyecto GitHub:https://github.com/wvangeit/ccrypt/tree/master
+
+Específicamente:
+https://github.com/wvangeit/ccrypt/blob/master/check/boxes-ref.dat
+https://github.com/wvangeit/ccrypt/blob/master/check/rijndael-alg-ref.c
+https://github.com/wvangeit/ccrypt/blob/master/check/rijndael-alg-ref.h
