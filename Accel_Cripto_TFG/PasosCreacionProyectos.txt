@@ -1,0 +1,18 @@
+Las siguientes instrucciones son los pasos para la creación de un proyecto para una implementación, con indiferencia del algoritmo criptográfico y la versión seleccionada
+
+1- Crear nuevo proyecto con la herramienta de Vivado
+	- Buscar y seleccionar "parts" xc7a100tcsg324-1, finalizar el proyecto.
+
+2- Importar cada archivo en su sección correspondiente, indiada según el nombre de la carpeta a la que pertenece, 
+	- El archivo Master XDC.xdc de constraints se importa como un archivo constraints, 
+	- El archivo con "_tb.vhd" de la carpeta simulation code se importa como un simulation sources, 
+	- El resto de archivos de la carpeta source code se importan como design sources.
+
+Con esto ya estaría creado el proyecto deseado.
+
+Para realizar la simulación, en la jerarquía de «Sources», dentro de la carpeta «Simulation», se debe hacer clic derecho sobre el archivo «..._tb» y seleccionar la opción «Set as Top». Finalmente, en el menú izquierdo, se debe pulsar «Run Simulation».
+
+
+Para la implementación en la placa puede surgir algún problema durante el proceso de implementación al obtener un valor de WNS negativo. Si esto ocurre, en la ventana inferior de Vivado se debe seleccionar la opción «Reset Runs» haciendo clic derecho sobre «synth_1» y, posteriormente, volver a ejecutar los procesos de síntesis e implementación. Otra opción consiste en aumentar el valor del periodo en el archivo «Master XDC.xdc» y volver a ejecutar ambos procesos.
+
+Una vez finalizados los procesos de síntesis e implementación, se genera el bitstream. Al finalizar este proceso, se conecta la placa Nexys 4 y se expande «Open Hardware Manager». A continuación, se selecciona «Open Target» y, posteriormente, «Program Device», con lo que el proyecto queda implementado en la placa.
